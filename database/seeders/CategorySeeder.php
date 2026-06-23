@@ -10,6 +10,18 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
+            ['name' => 'Oil & Ghee',        'children' => ['Mustard Oil', 'Gawa Ghee', 'Olive Oil', 'Coconut Oil']],
+            ['name' => 'Organic',           'children' => ['Organic Honey', 'Organic Tea', 'Organic Powder', 'Certified Food']],
+            ['name' => 'Honey',             'children' => ['Sundarban Honey', 'Black Seed Honey', 'Lychee Flower Honey', 'Honeycomb']],
+            ['name' => 'Dates',             'children' => ['Safawi Kalmi', 'Medjool', 'Sukkari', 'Ajwa', 'Mabroom']],
+            ['name' => 'Spices',            'children' => ['Whole Spices', 'Basic Spices', 'Mixed Spices', 'Masala']],
+            ['name' => 'Nuts & Seeds',      'children' => ['Nuts', 'Seeds', 'Cashew Nuts', 'Honey Nuts']],
+            ['name' => 'Beverage',          'children' => ['Tea', 'Coffee', 'Juice', 'Health Drinks']],
+            ['name' => 'Rice',              'children' => ['Aromatic Rice', 'Regular Rice', 'Rice Flour']],
+            ['name' => 'Flours & Lentils',  'children' => ['Flours', 'Lentils', 'Atta', 'Dal']],
+            ['name' => 'Functional Food',   'children' => ['Super Food', 'Supplements', 'Healthy Snacks']],
+            ['name' => 'Pickle',            'children' => ['Mango Pickle', 'Mixed Pickle', 'Chili Pickle']],
+            ['name' => 'Combos',            'children' => ['Honey Combos', 'Ghee Combos', 'Masala Combos']],
             ['name' => 'Electronics', 'children' => ['Phones', 'Laptops', 'Tablets', 'Accessories']],
             ['name' => 'Fashion',     'children' => ['Men', 'Women', 'Kids', 'Shoes']],
             ['name' => 'Home & Garden','children' => ['Furniture', 'Kitchen', 'Decor']],

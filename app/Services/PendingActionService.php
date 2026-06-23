@@ -36,7 +36,7 @@ class PendingActionService
                 break;
 
             case 'order_tracking':
-                $redirect = route('customer.order.tracking');
+                $redirect = route('order.tracking');
                 break;
         }
 

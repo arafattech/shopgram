@@ -26,7 +26,7 @@
                     <a href="{{ route('customer.orders.index') }}" class="list-group-item list-group-item-action {{ request()->routeIs('customer.orders.*') ? 'active' : '' }}">
                         <i class="bi bi-bag me-2"></i>My Orders
                     </a>
-                    <a href="{{ route('customer.order.tracking') }}" class="list-group-item list-group-item-action {{ request()->routeIs('customer.order.tracking') ? 'active' : '' }}">
+                    <a href="{{ route('order.tracking') }}" class="list-group-item list-group-item-action {{ request()->routeIs('order.tracking') ? 'active' : '' }}">
                         <i class="bi bi-geo me-2"></i>Track Order
                     </a>
                     <a href="{{ route('customer.wishlist.index') }}" class="list-group-item list-group-item-action {{ request()->routeIs('customer.wishlist.*') ? 'active' : '' }}">

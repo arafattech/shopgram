@@ -30,7 +30,6 @@ class OrderController extends Controller
         $request->validate(['order_number' => 'required|string']);
 
         $order = Order::where('order_number', $request->order_number)
-            ->where('user_id', auth()->id())
             ->with(['statusHistories', 'courier'])
             ->first();
 

@@ -28,6 +28,9 @@
         @media (min-width: 992px) { .mobile-nav { display: none; } }
         .cart-badge { position: relative; }
         .cart-badge .badge { position: absolute; top: -8px; right: -8px; font-size: .65rem; padding: 2px 5px; }
+        .track-order-link { display: inline-flex; flex-direction: column; align-items: center; gap: 1px; color: #0f172a; font-size: .72rem; line-height: 1.05; text-decoration: none; white-space: nowrap; }
+        .track-order-link i { font-size: 1.25rem; line-height: 1; color: #0f172a; }
+        .track-order-link:hover, .track-order-link:hover i { color: var(--primary); }
         .toast-container { position: fixed; top: 1rem; right: 1rem; z-index: 9999; }
         .section-title { font-weight: 700; position: relative; padding-bottom: .5rem; margin-bottom: 1.5rem; }
         .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--primary); }
@@ -51,6 +54,10 @@
 
         {{-- Nav Icons --}}
         <div class="d-flex align-items-center gap-3">
+            <a href="{{ route('order.tracking') }}" class="track-order-link">
+                <i class="bi bi-geo-alt"></i>
+                <span>Track Order</span>
+            </a>
             <a href="{{ route('cart.index') }}" class="text-dark cart-badge">
                 <i class="bi bi-cart3 fs-5"></i>
                 @if($cartCount > 0)<span class="badge bg-danger rounded-pill">{{ $cartCount }}</span>@endif

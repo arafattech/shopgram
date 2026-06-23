@@ -1,11 +1,12 @@
-@extends('layouts.customer')
+@extends('layouts.app')
 @section('title', 'Track Order')
-@section('customer_content')
+@section('content')
+<div class="container py-4">
 <h4 class="fw-bold mb-4">Track Your Order</h4>
 
 <div class="card border-0 shadow-sm mb-4">
     <div class="card-body">
-        <form action="{{ route('customer.order.track') }}" method="POST">
+        <form action="{{ route('order.track') }}" method="POST">
             @csrf
             <div class="row g-2">
                 <div class="col-md-8">
@@ -40,4 +41,5 @@
     </div>
 </div>
 @endisset
+</div>
 @endsection

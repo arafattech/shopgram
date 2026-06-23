@@ -11,6 +11,7 @@ use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\Frontend\PageController as FrontPageController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\NewsletterController;
+use App\Http\Controllers\Customer\OrderController as CustomerOrderController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 
@@ -26,6 +27,8 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact.index
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 Route::get('/page/{slug}', [FrontPageController::class, 'show'])->name('page.show');
+Route::get('/order-tracking', [CustomerOrderController::class, 'tracking'])->name('order.tracking');
+Route::post('/order-tracking', [CustomerOrderController::class, 'trackByNumber'])->name('order.track');
 
 // Auth routes
 Route::middleware('guest')->group(function () {
