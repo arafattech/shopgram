@@ -44,7 +44,7 @@ class CartService
 
     public function getItems(User $user)
     {
-        return CartItem::with(['product.thumbnail', 'variant'])
+        return CartItem::with(['product', 'variant'])
             ->where('user_id', $user->id)
             ->get();
     }

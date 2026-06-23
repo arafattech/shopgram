@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
             SettingSeeder::class,
             ShippingZoneSeeder::class,
             CategorySeeder::class,
+            ProductSeeder::class,
         ]);
     }
 }
